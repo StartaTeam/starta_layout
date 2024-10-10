@@ -1,0 +1,10 @@
+@import './utils/pluginsOverload'; // Переписывание некоторых стилей плагинов. Изменение пути картинок и т.д.
+
+// Настройки
+@import './components/fonts'; // Подлкючение шрифтов
+@import './mixins/media'; // Mixin'ы для медиа запросов
+@import './utils/variables'; // Переменные
+@import './utils/global'; // Глобальные правила
+
+// Стили модалок
+@import './parts/modals';

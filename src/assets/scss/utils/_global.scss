@@ -1,0 +1,101 @@
+@import "../../../node_modules/normalize.css/normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+ol,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.content-wrapper {
+  max-width: $desktopMaxWidth;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mg-top-1 {
+  margin-top: 1rem;
+}
+
+.mg-top-2 {
+  margin-top: 2rem;
+}
+
+.mg-top-3 {
+  margin-top: 3rem;
+}
+
+.mg-top-4 {
+  margin-top: 4rem;
+}
+
+.section-margin {
+  margin-top: $desktopSectionsMargin;
+}
+
+.section-padding {
+  padding-top: $desktopSectionsMargin;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.no-margin {
+  margin: unset;
+}
+
+@include notebook {
+  .content-wrapper {
+    max-width: $notebookMaxWidth;
+  }
+}
+
+@include tablet {
+  .content-wrapper {
+    max-width: $tabletMaxWidth;
+  }
+}
+
+@include mobile {
+  .content-wrapper {
+    max-width: $mobileMaxWidth;
+  }
+}
