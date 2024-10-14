@@ -35,8 +35,8 @@ p {
   margin: 0;
 }
 
-.content-wrapper {
-  max-width: $desktopMaxWidth;
+.content_area {
+  max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
 }
@@ -58,11 +58,11 @@ p {
 }
 
 .section-margin {
-  margin-top: $desktopSectionsMargin;
+  margin-top: var(--section-margin);
 }
 
 .section-padding {
-  padding-top: $desktopSectionsMargin;
+  padding-top: var(--section-margin);
 }
 
 .row {
@@ -83,19 +83,19 @@ p {
 }
 
 @include notebook {
-  .content-wrapper {
-    max-width: $notebookMaxWidth;
+  .content_area {
+    max-width: var(--max-width);
   }
 }
 
 @include tablet {
-  .content-wrapper {
-    max-width: $tabletMaxWidth;
+  .content_area {
+    max-width: var(--max-width);
   }
 }
 
 @include mobile {
-  .content-wrapper {
-    max-width: $mobileMaxWidth;
+  .content_area {
+    max-width: var(--max-width);
   }
 }

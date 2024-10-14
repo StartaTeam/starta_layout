@@ -2,4 +2,44 @@
 pagetitle: UIkit
 ---
 
-<div class="content-wrapper"></div>
+<div class="content_area ui_area mg-top-1">
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Input Text</legend>
+        {{> ui_field_text name="name" title="Как вас зовут?" placeholder="Укажите ФИО" description="Введите текст" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Input Date</legend>
+        {{> field_date name="birthdate" title="Дата вашего рождения" description="Выберите дату" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Input Phone</legend>
+        {{> field_text name="phone" title="Номер вашего телефона" description="Введите номер" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Input Email</legend>
+        {{> field_text name="email" title="Ваш электронный адрес" description="Введите email" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Input Number</legend>
+        {{> field_number name="count" title="Количество" placeholder="1" value="1" description="Укажите количество" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Select</legend>
+        {{> field_select name="select" title="Выпадающий список" placeholder="Выберите вариант" description="Выберите вариант из списка" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Textarea</legend>
+        {{> field_textarea name="comment" placeholder="Оставьте комментарий" description="Описание поля ввода"}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Radio</legend>
+        {{> field_radio name="payment" title="Наличными" value="Наличными" required=true}}
+        {{> field_radio name="payment" title="Картой в офисе" value="Картой в офисе" checked=true required=true}}
+        {{> field_radio name="payment" title="Переводом" value="Переводом" required=true}}
+    </fieldset>
+    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+        <legend>Checkbox</legend>
+        {{> field_checkbox name="terms[]" title="Нажимая кнопку \"Забронировать\" я соглашаюсь с договором на оказание услуг и даю согласие на обработку персональных данных."
+        required=true}}
+    </fieldset>
+</div>

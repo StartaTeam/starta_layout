@@ -1,0 +1,38 @@
+:root {
+    --ui-color-primary: #333333;
+    --ui-color-secondary: #c3c3c3;
+    --ui-block-padding: 1rem;
+    --ui-area-gap: 1rem;
+}
+
+.ui {
+    &_area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--ui-area-gap);
+    }
+    &_block {
+        border: 1px dashed var(--ui-color-primary);
+        border-radius: 10px;
+        padding: var(--ui-block-padding);
+        &-lg_3 {
+            flex: 0 0 calc(33% - var(--ui-area-gap));
+            width: calc(33% - var(--ui-area-gap));
+            max-width: calc(33% - var(--ui-area-gap));
+        }
+        &-md_6 {
+            @include tablet {
+                flex: 0 0 calc(50% - var(--ui-area-gap));
+                width: calc(50% - var(--ui-area-gap));
+                max-width: calc(50% - var(--ui-area-gap));
+            }
+        }
+        &-sm_12 {
+            @include mobile {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

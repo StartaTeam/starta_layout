@@ -9,7 +9,7 @@
 @mixin smallTablet {
   @media screen and (max-width: $smallTabletBreakpoint) {
     @content;
-  }
+  } 
 }
 
 @mixin tablet {

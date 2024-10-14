@@ -1,0 +1,169 @@
+.field {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__title {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    &__description {
+        font-size: 12px;
+        padding-left: 10px;
+        font-weight: 400;
+        color: #696969;
+    }
+
+    &__radio,
+    &__checkbox {
+        line-height: 1;
+
+        >input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            height: 0;
+            display: table;
+
+            &:not(:disabled):not(:checked)+.field__title:hover::before {
+                border-color: #b3d7ff;
+            }
+
+            &:not(:disabled):active+.field__title::before {
+                background-color: #b3d7ff;
+                border-color: #b3d7ff;
+            }
+
+            &:focus:not(:checked)+.field__title::before {
+                border-color: var(--color-main-blue);
+            }
+
+            &:disabled+.field__title::before {
+                background-color: #e9ecef;
+            }
+        }
+
+        .field__title {
+            // display: inline-flex;
+            // align-items: center;
+            user-select: none;
+            font-size: 18px;
+            line-height: 1.2;
+            position: relative;
+            cursor: pointer;
+            padding-left: 38px;
+
+            a {
+                text-decoration: underline;
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 29px;
+                height: 29px;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border: 1px solid #adb5bd;
+                margin-right: 12px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    &__radio {
+        >input {
+            &:checked+.field__title::before {
+                border-color: var(--color-main-blue);
+                background-color: var(--color-main-blue);
+            }
+        }
+
+        .field__title {
+            &::before {
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &__checkbox {
+        >input {
+            &:checked+.field__title::before {
+                border-color: var(--color-main-blue);
+                background-color: var(--color-main-blue);
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+            }
+        }
+
+        .field__title {
+            &::before {
+                border-radius: 6px;
+            }
+        }
+    }
+
+    @include tablet {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__radio,
+        &__checkbox {
+            .field__title {
+                font-size: 14px;
+                padding-left: 28px;
+
+                &:before {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        &__radio {
+            .field__title {
+                text-align: center;
+                font-size: 12px;
+                padding-left: 0;
+
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    left: 50%;
+                    top: 0;
+                    transform: translate(-50%, -110%);
+                }
+            }
+        }
+
+        &__checkbox {
+            .field__title {
+                font-size: 12px;
+
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+
+}

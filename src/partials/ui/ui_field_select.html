@@ -1,0 +1,9 @@
+<div class="field__wrap">
+    <label for="field_{{name}}" class="field__label">
+        <span class="field__title">{{title}}</span>
+        <select id="field_{{name}}" name="{{name}}" value="{{value}}" {{#if required}}required{{/if}}>
+            <option selected disabled value="">{{placeholder}}</option>
+        </select>
+    </label>
+    <span class="field__description">{{description}}</span>
+</div>

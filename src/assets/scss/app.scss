@@ -5,6 +5,9 @@
 @import './mixins/media'; // Mixin'ы для медиа запросов
 @import './utils/variables'; // Переменные
 @import './utils/global'; // Глобальные правила
+@import './components/fields'; // Поля форм
+@import './components/headers'; // Заголовки
+@import './components/ui'; // стили для ui
 
 // Стили модалок
 @import './parts/modals';
