@@ -1,5 +1,6 @@
 import $ from 'jquery'; // Jquery
 import './utils.js'; // Дополнительная логика (Модалки, якорные ссылки)
+import { displayRootVariable } from './uikit.js'; // вспомогательный функционал для UIkit
 
 window.jQuery = $;
 window.$ = $;
@@ -19,3 +20,8 @@ $("input[name*=phone]").on("blur", function () {
     $(this).closest(".input_container").removeClass("error");
   }
 });
+
+
+window.onload = () => {
+  displayRootVariable();
+};

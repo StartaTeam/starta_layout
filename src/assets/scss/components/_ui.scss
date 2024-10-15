@@ -1,7 +1,7 @@
 :root {
     --ui-color-primary: #333333;
     --ui-color-secondary: #c3c3c3;
-    --ui-block-padding: 1rem;
+    --ui-block-padding: 1.4rem;
     --ui-area-gap: 1rem;
 }
 
@@ -32,6 +32,28 @@
                 flex: 0 0 100%;
                 width: 100%;
                 max-width: 100%;
+            }
+        }
+        &.row_flex {
+            gap: 1rem;
+        }
+    }
+    &_color {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        &_square {
+            width: 10rem;
+            height: 5rem;
+            border: 1px solid black;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        &_title {
+            span {
+                font-size: 2rem;
+                display: table;
+                margin-top: 0.5rem;
             }
         }
     }

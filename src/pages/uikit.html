@@ -3,6 +3,26 @@ pagetitle: UIkit
 ---
 
 <div class="content_area ui_area mg-top-1">
+    <fieldset class="ui_block row_flex">
+        <legend>Цвета</legend>
+        <div class="ui_color">
+            <div class="ui_color_square" style="background-color: var(--color-primary);"></div>
+            <p class="ui_color_title">--color-primary: <span ui_root="--color-primary"></span></p>
+        </div>
+        <div class="ui_color">
+            <div class="ui_color_square" style="background-color: var(--color-secondary);"></div>
+            <p class="ui_color_title">--color-secondary: <span ui_root="--color-secondary"></span></p>
+        </div>
+    </fieldset>
+
+    <fieldset class="ui_block row_flex row_flex-column">
+        <legend>Шрифты</legend>
+        <p>Основной шрифт: <span ui_root="--font-main" style="font-family: var(--font-main);"></span></p>
+        <p>Шрифт заголовков: <span ui_root="--font-headers" style="font-family: var(--font-headers);"></span></p>
+    </fieldset>
+</div>
+
+<div class="content_area ui_area mg-top-1">
     <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
         <legend>Input Text</legend>
         {{> ui_field_text name="name" title="Как вас зовут?" placeholder="Укажите ФИО" description="Введите текст" required=true}}
@@ -31,14 +51,16 @@ pagetitle: UIkit
         <legend>Textarea</legend>
         {{> field_textarea name="comment" placeholder="Оставьте комментарий" description="Описание поля ввода"}}
     </fieldset>
-    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+    <fieldset class="ui_block row_flex row_flex-column ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
         <legend>Radio</legend>
         {{> field_radio name="payment" title="Наличными" value="Наличными" required=true}}
         {{> field_radio name="payment" title="Картой в офисе" value="Картой в офисе" checked=true required=true}}
         {{> field_radio name="payment" title="Переводом" value="Переводом" required=true}}
     </fieldset>
-    <fieldset class="ui_block ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
+    <fieldset class="ui_block row_flex row_flex-column ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
         <legend>Checkbox</legend>
+        {{> field_checkbox name="terms[]" title="Нажимая кнопку \"Забронировать\" я соглашаюсь с договором на оказание услуг и даю согласие на обработку персональных данных."
+        required=true}}
         {{> field_checkbox name="terms[]" title="Нажимая кнопку \"Забронировать\" я соглашаюсь с договором на оказание услуг и даю согласие на обработку персональных данных."
         required=true}}
     </fieldset>
