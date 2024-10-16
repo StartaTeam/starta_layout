@@ -3,6 +3,10 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        input, select, textarea {
+            font-size: 1.6rem;
+            padding: 0.4rem 1rem;
+        }
     }
 
     &__label {

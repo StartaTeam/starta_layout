@@ -17,8 +17,8 @@ pagetitle: UIkit
 
     <fieldset class="ui_block row_flex row_flex-column">
         <legend>Шрифты</legend>
-        <p>Основной шрифт: <span ui_root="--font-main" style="font-family: var(--font-main);"></span></p>
-        <p>Шрифт заголовков: <span ui_root="--font-headers" style="font-family: var(--font-headers);"></span></p>
+        <p>Основной шрифт: <span ui_root="--font-family-main" style="font-family: var(--font-family-main);"></span></p>
+        <p>Шрифт заголовков: <span ui_root="--font-family-headers" style="font-family: var(--font-family-headers);"></span></p>
     </fieldset>
 
     <fieldset class="ui_block row_flex row_flex-column">
@@ -27,6 +27,19 @@ pagetitle: UIkit
         <h2>Заголовок H2</h2>
         <p>Товарищи! новая модель организационной деятельности играет важную роль в формировании дальнейших направлений развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание существенных финансовых и административных условий.</p>
         <p>Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</p>
+    </fieldset>
+</div>
+
+<div class="content_area ui_area mg-top-1">
+    <fieldset class="ui_block row_flex">
+        <legend>Buttons</legend>
+        {{> ui_button type="filled" text="Filled Button"}}
+        {{> ui_button type="framed" text="Framed Button"}}
+        {{> ui_button type="filled" text="Disabled Button" disabled=true}}
+    </fieldset>
+    <fieldset class="ui_block">
+        <legend>Modals</legend>
+        {{> ui_button type="filled" modal="modalDemo" text="Пример модального окна"}}
     </fieldset>
 </div>
 
@@ -69,15 +82,7 @@ pagetitle: UIkit
         <legend>Checkbox</legend>
         {{> ui_field_checkbox name="terms[]" title="Нажимая кнопку \"Забронировать\" я соглашаюсь с договором на оказание услуг и даю согласие на обработку персональных данных."
         required=true}}
-        {{> ui_field_checkbox name="terms[]" title="Нажимая кнопку \"Забронировать\" я соглашаюсь с договором на оказание услуг и даю согласие на обработку персональных данных."
+        {{> ui_field_checkbox name="terms[]" title="Согласен с политикой конфиденциальности"
         required=true}}
-    </fieldset>
-</div>
-
-<div class="content_area ui_area mg-top-1">
-    <fieldset class="ui_block row_flex row_flex-column ui_block-lg_3 ui_block-md_6 ui_block-sm_12">
-        <legend>Modals</legend>
-        <div class="btn btn__filled" data-open="modalDemo" data-show_backdrop>Модалка с подложкой</div>
-        <div class="btn btn__framed" data-open="modalDemo">Обычная модалка</div>
     </fieldset>
 </div>

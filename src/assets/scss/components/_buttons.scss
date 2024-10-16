@@ -15,7 +15,7 @@
     &[disabled] {
         cursor: default;
         pointer-events: none;
-        filter: grayscale(1)
+        filter: grayscale(1) contrast(0.5);
     }
 
     &__framed {

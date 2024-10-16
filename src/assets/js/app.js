@@ -1,6 +1,7 @@
 import $ from 'jquery'; // Jquery
 import './utils.js'; // Дополнительная логика (Модалки, якорные ссылки)
 import './utilities/modals.js'; // Модальные окна
+import './utilities/autoheight.js'; // Автовыравнивание элементов по высоте
 import { displayRootVariable } from './uikit.js'; // вспомогательный функционал для UIkit
 
 window.jQuery = $;
