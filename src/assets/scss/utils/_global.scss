@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  font-size: 1.6rem;
+  font-size: var(--font-size);
 }
 
 img {
@@ -28,12 +28,12 @@ a {
   color: currentColor;
 }
 
-ul,
-ol,
-p {
-  padding: 0;
-  margin: 0;
-}
+// ul,
+// ol,
+// p {
+//   padding: 0;
+//   margin: 0;
+// }
 
 .content_area {
   max-width: var(--max-width);

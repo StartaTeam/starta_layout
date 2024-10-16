@@ -1,32 +1,32 @@
 import $ from 'jquery';
 
-// Тоглим класс is-active для объектов указанных в дата параметре
-// Если стоит класс self-active, то при клике будет накидываться класс на указанный элемент в теге и на сам элемент
-// Если указан класс with-backdrop, то накидываем на backdrop класс is-active
-// Бургер при открытии накидывает класс на всю шапку
-$("[data-open]").on("click", function () {
-  if ($(this).hasClass("self-active")) {
-    $(this).toggleClass("is-active");
-  }
-  if ($(this).hasClass("header_burger")) {
-    $(".header").toggleClass("is-active");
-  }
-  if ($(this).hasClass("with-backdrop")) {
-    $("#backdrop").toggleClass("is-active");
-  }
-  $("#" + $(this).data("open")).toggleClass("is-active");
-});
+// // Тоглим класс is-active для объектов указанных в дата параметре
+// // Если стоит класс self-active, то при клике будет накидываться класс на указанный элемент в теге и на сам элемент
+// // Если указан класс with-backdrop, то накидываем на backdrop класс is-active
+// // Бургер при открытии накидывает класс на всю шапку
+// $("[data-open]").on("click", function () {
+//   if ($(this).hasClass("self-active")) {
+//     $(this).toggleClass("is-active");
+//   }
+//   if ($(this).hasClass("header_burger")) {
+//     $(".header").toggleClass("is-active");
+//   }
+//   if ($(this).hasClass("with-backdrop")) {
+//     $("#backdrop").toggleClass("is-active");
+//   }
+//   $("#" + $(this).data("open")).toggleClass("is-active");
+// });
 
-// Закрытие модалок
-$('[data-close]').on('click', function() {
-  $(this).closest('.modal').removeClass('is-active');
-  $('#backdrop').removeClass('is-active');
-});
+// // Закрытие модалок
+// $('[data-close]').on('click', function() {
+//   $(this).closest('.modal').removeClass('is-active');
+//   $('#backdrop').removeClass('is-active');
+// });
 
-$('#backdrop').on('click', function() {
-  $(this).removeClass('is-active');
-  $('.modal.is-active').removeClass('is-active');
-});
+// $('#backdrop').on('click', function() {
+//   $(this).removeClass('is-active');
+//   $('.modal.is-active').removeClass('is-active');
+// });
 
 // Links
 $('a[data-anchor]').on('click', function(e) {

@@ -1,13 +1,14 @@
-@import './utils/pluginsOverload'; // Переписывание некоторых стилей плагинов. Изменение пути картинок и т.д.
-
 // Настройки
 @import './components/fonts'; // Подлкючение шрифтов
 @import './mixins/media'; // Mixin'ы для медиа запросов
 @import './utils/variables'; // Переменные
 @import './utils/global'; // Глобальные правила
-@import './components/fields'; // Поля форм
-@import './components/headers'; // Заголовки
-@import './components/ui'; // стили для ui
+@import './components/fields'; // Стили полей форм
+@import './components/typography'; // Стили заголовков и текстовых блоков 
+@import './components/buttons'; // Стили кнопок
+@import './components/ui'; // Стили только для ui-кита (не должны идти в продакшн)
 
-// Стили модалок
+// Стили отдельных блоков и страниц
+@import './parts/header';
+@import './parts/footer';
 @import './parts/modals';

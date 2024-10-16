@@ -1,0 +1,48 @@
+// Buttons {
+.btn {
+    display: flex;
+    white-space: nowrap;
+    padding: 0.7rem 2rem;
+    border: 0.2rem transparent solid;
+    transition: .2s;
+    align-items: center;
+    line-height: 1;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    &.disabled,
+    &[disabled] {
+        cursor: default;
+        pointer-events: none;
+        filter: grayscale(1)
+    }
+
+    &__framed {
+        font-weight: 400;
+        border-color: var(--color-primary);
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+        }
+    }
+
+    &__filled {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        color: white;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 414px) {
+        font-size: 1.4rem;
+    }
+}
